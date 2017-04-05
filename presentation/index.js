@@ -61,6 +61,17 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" bgImage={images.bg}>
+          <Heading size={4} textColor="primary">
+            Find common songs among friends and turn them into the perfect playlist.
+          </Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary" bgImage={images.bg}>
+          <Heading size={5} textColor="tertiary" caps>Who is Jamify for?</Heading>
+          <Appear>
+            <Heading size={6} textColor="secondary">Anyone that listens to music with friends.</Heading>
+          </Appear>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary" bgImage={images.bg}>
           <Heading size={3} textColor="primary" caps>What about it?</Heading>
           {/* <Heading size={1} textColor="secondary">Heading 1</Heading>
           <Heading size={2} textColor="secondary">Heading 2</Heading>
@@ -69,10 +80,10 @@ export default class Presentation extends React.Component {
             <Heading size={4} textColor="secondary">You got music.</Heading>
           </Appear>
           <Appear>
-            <Heading size={4} textColor="secondary">Your friend got music.</Heading>
+            <Heading size={4} textColor="secondary">Your friends got music.</Heading>
           </Appear>
           <Appear>
-            <Heading size={4} textColor="secondary">Listen to what you both love.</Heading>
+            <Heading size={4} textColor="secondary">Listen to what you all love.</Heading>
           </Appear>
           {/* <Text size={6} textColor="secondary">Any questions?</Text> */}
         </Slide>
@@ -92,6 +103,25 @@ export default class Presentation extends React.Component {
               <ListItem><em>Jam</em></ListItem>
             </Appear>
           </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary" bgImage={images.bg}>
+          <Heading size={3} textColor="primary" caps>Jamify's Future</Heading>
+          {/* <Heading size={1} textColor="secondary">Heading 1</Heading>
+          <Heading size={2} textColor="secondary">Heading 2</Heading>
+          <Heading size={3} textColor="secondary">Heading 3</Heading> */}
+          <Appear>
+            <Heading size={5} textColor="secondary">Create from multiple playlists</Heading>
+          </Appear>
+          <Appear>
+            <div>
+              <Heading size={5} textColor="secondary">Use other services</Heading>
+              <Heading size={6} textColor="secondary">(Pandora, Apple Music)</Heading>
+            </div>
+          </Appear>
+          <Appear>
+            <Heading size={5} textColor="secondary">Discovery mode</Heading>
+          </Appear>
+          {/* <Text size={6} textColor="secondary">Any questions?</Text> */}
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary" bgImage={images.bg}>
           <Image src={images.logo} />
