@@ -20,11 +20,11 @@ import {
 import preloader from "spectacle/lib/utils/preloader";
 
 // Import theme
-import createTheme from "spectacle/lib/themes/default";
+import createTheme from "../assets/themes/jamify/";
 
 // Require CSS
 require("normalize.css");
-require("spectacle/lib/themes/default/index.css");
+require("../assets/themes/jamify/index.css");
 
 
 const images = {
@@ -33,6 +33,13 @@ const images = {
   markdown: require("../assets/markdown.png"),
   logo: require("../assets/logo-wh.svg"),
   bg: require("../assets/bg.png"),
+  demo01: require("../assets/demo/demo-01.jpg"),
+  demo02: require("../assets/demo/demo-02.jpg"),
+  demo03: require("../assets/demo/demo-03.jpg"),
+  demo04: require("../assets/demo/demo-04.jpg"),
+  demo05: require("../assets/demo/demo-05.jpg"),
+  demo06: require("../assets/demo/demo-06.jpg"),
+  demo07: require("../assets/demo/demo-07.jpg"),
 };
 
 preloader(images);
@@ -88,21 +95,25 @@ export default class Presentation extends React.Component {
           {/* <Text size={6} textColor="secondary">Any questions?</Text> */}
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary" bgImage={images.bg}>
-          <Heading size={6} textColor="secondary" caps>How's it work?</Heading>
-          <List>
-            <Appear>
-              <ListItem>Create a new Jamify Playlist</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Choose a Spotify playlist</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Invite your friend to contribute</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem><em>Jam</em></ListItem>
-            </Appear>
-          </List>
+          <Image src={images.demo01} width="100%"></Image>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary" bgImage={images.bg}>
+          <Image src={images.demo02} width="100%"></Image>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary" bgImage={images.bg}>
+          <Image src={images.demo03} width="100%"></Image>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary" bgImage={images.bg}>
+          <Image src={images.demo04} width="100%"></Image>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary" bgImage={images.bg}>
+          <Image src={images.demo05} width="100%"></Image>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary" bgImage={images.bg}>
+          <Image src={images.demo06} width="100%"></Image>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary" bgImage={images.bg}>
+          <Image src={images.demo07} width="100%"></Image>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" bgImage={images.bg}>
           <Heading size={3} textColor="primary" caps>Jamify's Future</Heading>
@@ -123,7 +134,7 @@ export default class Presentation extends React.Component {
           </Appear>
           {/* <Text size={6} textColor="secondary">Any questions?</Text> */}
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary" bgImage={images.bg}>
+        <Slide transition={["slide"]} bgColor="secondary" textColor="primary" bgImage={images.bg}>
           <Image src={images.logo} />
           <Heading size={4} textColor="primary">"Any questions?"</Heading>
           <Heading size={7} textColor="tertiary">&#8212; David S. Pumpkins</Heading>
