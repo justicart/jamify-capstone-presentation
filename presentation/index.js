@@ -31,7 +31,8 @@ const images = {
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   markdown: require("../assets/markdown.png"),
-  logo: require("../assets/logo-wh.svg")
+  logo: require("../assets/logo-wh.svg"),
+  bg: require("../assets/bg.png"),
 };
 
 preloader(images);
@@ -50,16 +51,16 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["fade", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["slide"]} bgColor="secondary">
+        <Slide transition={["slide"]} bgColor="secondary" bgImage={images.bg}>
           <Image src={images.logo} />
           {/* <Heading size={1} fit caps lineHeight={1} textColor="primary">
             Welcome to Jamify
           </Heading> */}
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            Music everyone will love.
+            Music everyone will love
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
+        <Slide transition={["fade"]} bgColor="tertiary" bgImage={images.bg}>
           <Heading size={3} textColor="primary" caps>What about it?</Heading>
           {/* <Heading size={1} textColor="secondary">Heading 1</Heading>
           <Heading size={2} textColor="secondary">Heading 2</Heading>
@@ -75,7 +76,7 @@ export default class Presentation extends React.Component {
           </Appear>
           {/* <Text size={6} textColor="secondary">Any questions?</Text> */}
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary" bgImage={images.bg}>
           <Heading size={6} textColor="secondary" caps>How's it work?</Heading>
           <List>
             <Appear>
@@ -92,12 +93,10 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Image src={images.logo} />
-            <Quote>Any questions?</Quote>
-            <Cite>David S. Pumpkins</Cite>
-          </BlockQuote>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary" bgImage={images.bg}>
+          <Image src={images.logo} />
+          <Heading size={4} textColor="primary">"Any questions?"</Heading>
+          <Heading size={7} textColor="tertiary">&#8212; David S. Pumpkins</Heading>
         </Slide>
       </Deck>
     );
