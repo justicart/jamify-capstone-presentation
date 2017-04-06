@@ -40,6 +40,7 @@ const images = {
   demo05: require("../assets/demo/demo-05.jpg"),
   demo06: require("../assets/demo/demo-06.jpg"),
   demo07: require("../assets/demo/demo-07.jpg"),
+  group: require("../assets/group.png")
 };
 
 preloader(images);
@@ -58,6 +59,9 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["fade", "slide"]} transitionDuration={500} theme={theme}>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Image src={images.group} />
+        </Slide>
         <Slide transition={["slide"]} bgColor="secondary" bgImage={images.bg}>
           <Image src={images.logo} />
           {/* <Heading size={1} fit caps lineHeight={1} textColor="primary">
@@ -120,9 +124,6 @@ export default class Presentation extends React.Component {
           {/* <Heading size={1} textColor="secondary">Heading 1</Heading>
           <Heading size={2} textColor="secondary">Heading 2</Heading>
           <Heading size={3} textColor="secondary">Heading 3</Heading> */}
-          <Appear>
-            <Heading size={5} textColor="secondary">Create from multiple playlists</Heading>
-          </Appear>
           <Appear>
             <div>
               <Heading size={5} textColor="secondary">Use other services</Heading>
