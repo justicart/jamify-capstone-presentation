@@ -40,7 +40,7 @@ const images = {
   demo05: require("../assets/demo/demo-05.jpg"),
   demo06: require("../assets/demo/demo-06.jpg"),
   demo07: require("../assets/demo/demo-07.jpg"),
-  group: require("../assets/group.png")
+  group: require("../assets/group.jpg")
 };
 
 preloader(images);
@@ -60,7 +60,10 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={["fade", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Image src={images.group} />
+          {/* <Image src={images.group} width="100%" /> */}
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" bgImage={images.group} textColor="tertiary">
+          {/* <Image src={images.group} width="100%" /> */}
         </Slide>
         <Slide transition={["slide"]} bgColor="secondary" bgImage={images.bg}>
           <Image src={images.logo} />
